@@ -2,34 +2,18 @@
 cd $(dirname $0)
 
 cd ../complete
-./mvnw clean package
+mvn clean package
 ret=$?
 if [ $ret -ne 0 ]; then
 exit $ret
 fi
 rm -rf target
 
-./gradlew build
+mvn package build
 ret=$?
 if [ $ret -ne 0 ]; then
 exit $ret
 fi
-rm -rf build
 
-cd ../initial
-
-./mvnw clean compile
-ret=$?
-if [ $ret -ne 0 ]; then
-exit $ret
-fi
-rm -rf target
-
-./gradlew compileJava
-ret=$?
-if [ $ret -ne 0 ]; then
-exit $ret
-fi
-rm -rf build
 
 exit
