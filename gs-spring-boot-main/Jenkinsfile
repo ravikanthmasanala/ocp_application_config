@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-             withEnv(['PATH+EXTRA=/home/capuser/jdk/jdk-18/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/capuser/.local/bin:/home/capuser/bin:/home/capuser/maven/apache-maven-3.8.4/bin']) {
+             withEnv(['PATH+EXTRA=/var/lib/jenkins/jdk-18/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/capuser/.local/bin:/home/capuser/bin:/var/lib/jenkins/apache-maven-3.8.4/bin']) {
              sh 'gs-spring-boot-main/test/run.sh'
              }
             }
