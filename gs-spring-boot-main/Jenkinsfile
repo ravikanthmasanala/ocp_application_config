@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                
-                
-                sh 'build.sh'
+             sh 'gs-spring-boot-main/test/run.sh'
             }
         }
      }
