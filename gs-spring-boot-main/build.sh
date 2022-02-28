@@ -1,8 +1,8 @@
 #!/bin/sh
 cd initial/
 echo "cleaning mvn build"
- mvn clean
+ /home/capuser/maven/apache-maven-3.8.4/bin/mvn clean
 echo "Building mvn package"
-mvn package
+/home/capuser/maven/apache-maven-3.8.4/bin/mvn package
 
 
